@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.encontrarte.encontrarte.model.Formulario;
+import com.encontrarte.encontrarte.model.RespuestaPost;
 import com.encontrarte.encontrarte.service.FormularioService;
 
 @RestController
@@ -72,9 +73,11 @@ public class FormularioController {
 	
 	//POST METHOD Formulario table
 	@PostMapping
-	public void postFormulario(@RequestBody Formulario formulario) {
+	public  ResponseEntity<RespuestaPost> postFormulario(@RequestBody Formulario formulario) {
 		
 		formularioController.addFormulario(formulario);
+		RespuestaPost respuesta=new RespuestaPost("existoso",formulario);
+		return ResponseEntity.status(HttpStatus.CREATED).body(respuesta);
 		
 	}
 }

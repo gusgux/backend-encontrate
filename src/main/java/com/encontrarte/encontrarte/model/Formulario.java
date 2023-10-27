@@ -13,9 +13,8 @@ public class Formulario {
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	@Column(name="id_formulario",unique=true,nullable=false)
-	
 	private Long id;
-	private String nombres;
+	private String nombre;
 	private String apellidos;
 	private String correo;
 	private String telefono;
@@ -26,80 +25,95 @@ public class Formulario {
 	public Formulario() {
 	}
 
-	public Formulario(Long id, String nombres, String apellidos, String correo, String telefono, String mensaje,
+
+	public Formulario(Long id, String nombre, String apellidos, String correo, String telefono, String mensaje,
 			String motivo) {
 		this.id = id;
-		this.nombres = nombres;
+		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.correo = correo;
 		this.telefono = telefono;
 		this.mensaje = mensaje;
 		this.motivo = motivo;
 	}
+
 
 	public Long getId() {
 		return id;
 	}
 
+
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getNombres() {
-		return nombres;
+
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
+
 
 	public String getApellidos() {
 		return apellidos;
 	}
 
+
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+
 
 	public String getCorreo() {
 		return correo;
 	}
 
+
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+
 
 	public String getTelefono() {
 		return telefono;
 	}
 
+
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
 
 	public String getMensaje() {
 		return mensaje;
 	}
 
+
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
+
 
 	public String getMotivo() {
 		return motivo;
 	}
 
+
 	public void setMotivo(String motivo) {
 		this.motivo = motivo;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Formulario [id=" + id + ", nombres=" + nombres + ", apellidos=" + apellidos + ", correo=" + correo
+		return "Formulario [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", correo=" + correo
 				+ ", telefono=" + telefono + ", mensaje=" + mensaje + ", motivo=" + motivo + "]";
 	}
-	
-	
 
+	
 	
 }
