@@ -1,13 +1,11 @@
 package com.encontrarte.encontrarte.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.encontrarte.encontrarte.model.Artista;
-import com.encontrarte.encontrarte.model.Tecnicas;
 import com.encontrarte.encontrarte.repository.ArtistaRepository;
 @Service 
 public class ArtistaService {

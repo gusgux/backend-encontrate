@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.encontrarte.encontrarte.model.Tecnicas;
-import com.encontrarte.encontrarte.repository.TecnicasRepository;
 import com.encontrarte.encontrarte.service.TecnicasService;
 
 @RestController  //Decimos que es una API Rest que trabaja con metodos GET PUT POST DELETE
